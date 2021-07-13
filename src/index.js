@@ -22,27 +22,15 @@ const io = socketio.listen(server);
 
 //aqui se hace la conexion a base de datos mongodb
 
-/*mongoose.connect('mongodb://127.0.0.1/chat-database')
+mongoose.connect('mongodb://127.0.0.1/chat-database')
 	.then(db => console.log('conectado a la base de datos'))
 	.catch(err => console.log(err));
-	mongoose.connect('mongodb+srv://cesar:cesar@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority', {
+	mongoose.connect('mongodb+srv://cesar:cesardiego12345@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority', {
 		useNewUrlParse: true,
-		useUnifiedTopology: true
-		.then(db => console.log('conectado a la base de datos'))
+		useUnifiedTopology: true	
+	})
+.then(db => console.log('conectado a la base de datos'))
 	.catch(err => console.log(err));
-	})*/
-
-const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://cesar:cesar@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-
-	
-
 
 //llamada a sockets, tambien se puede usar el export
 require('./sockets')(io);
