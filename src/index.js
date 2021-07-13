@@ -24,11 +24,21 @@ const io = socketio.listen(server);
 
 /*mongoose.connect('mongodb://127.0.0.1/chat-database')
 	.then(db => console.log('conectado a la base de datos'))
-	.catch(err => console.log(err));*/
+	.catch(err => console.log(err));
 	mongoose.connect('mongodb+srv://cesar:cesar@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority', {
 		useNewUrlParse: true,
 		useUnifiedTopology: true
-	})
+	})*/
+
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://cesar:cesar@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 	.then(db => console.log('conectado a la base de datos'))
 	.catch(err => console.log(err));
 
