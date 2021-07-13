@@ -5,7 +5,7 @@ $(function(){
 	//obteniendo los elementos del dom
 
 	const formulario = $('#formulario-mensajes');
-	const mensaje = $('#mensajes');
+	const mensaje = $('#mensaje');
 	const cuerpoChat = $('#cuerpoChat');
 
 	//obteniendo elementos del dom login
