@@ -25,7 +25,7 @@ const io = socketio.listen(server);
 /*mongoose.connect('mongodb://127.0.0.1/chat-database')
 	.then(db => console.log('conectado a la base de datos'))
 	.catch(err => console.log(err));*/
-	mongoose.connect('mongodb+srv://cesard123:KjNXEOSEV4fzTKDh@intercambio.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority')
+	mongoose.connect('mongodb+srv://cesar:cesar@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority')
 	.then(db => console.log('conectado a la base de datos'))
 	.catch(err => console.log(err));
 
