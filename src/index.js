@@ -28,6 +28,8 @@ const io = socketio.listen(server);
 	mongoose.connect('mongodb+srv://cesar:cesar@cluster0.h6fvy.mongodb.net/chat-database?retryWrites=true&w=majority', {
 		useNewUrlParse: true,
 		useUnifiedTopology: true
+		.then(db => console.log('conectado a la base de datos'))
+	.catch(err => console.log(err));
 	})*/
 
 const { MongoClient } = require('mongodb');
@@ -39,8 +41,7 @@ client.connect(err => {
   client.close();
 });
 
-	.then(db => console.log('conectado a la base de datos'))
-	.catch(err => console.log(err));
+	
 
 
 //llamada a sockets, tambien se puede usar el export
