@@ -4,19 +4,26 @@
 	<meta charset="utf-8">
 	<title>Videollamada</title>
 
-	
+
 </head>
 
 
  
 <body>
 
-
 <script src="https://unpkg.com/@daily-co/daily-js"></script>
 <script>
   callFrame = window.DailyIframe.createFrame();
   callFrame.join({ url: 'https://you.daily.co/hello' });
 </script>
+
+const callObject = window.DailyIframe.createCallObject();
+callObject.on('participant-updated', (event) => {
+  const p = event.participant;
+  myCustomMediaStreamTracksHandler(p.user_id, p.videoTrack, p.audioTrack);
+});
+callObject.join({ url: 'https://you.daily.co/hello' });
+
 
 </body>
 </html>
