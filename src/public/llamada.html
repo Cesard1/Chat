@@ -6,10 +6,13 @@
 </head>
 <body>
 
- <script>
-      callFrame = window.DailyIframe.createFrame();
-      callFrame.join({ url: 'https://your-team.daily.co/hello' })
-    </script>
+<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+<script>
+  function createFrameAndJoinRoom() {
+    window.callFrame = window.DailyIframe.createFrame();
+    callFrame.join({ url: A_DAILY_CO_ROOM_URL });
+  }
+</script>
 
 <!-- <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 <script>
