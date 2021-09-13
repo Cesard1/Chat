@@ -11,19 +11,11 @@
  
 <body>
 
-<script src="https://unpkg.com/@daily-co/daily-js"></script>
+<script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 <script>
   callFrame = window.DailyIframe.createFrame();
-  callFrame.join({ url: 'https://you.daily.co/hello' });
+  callFrame.join({ url: 'https://intercambio.daily.co/hello-daily' });
 </script>
-
-const callObject = window.DailyIframe.createCallObject();
-callObject.on('participant-updated', (event) => {
-  const p = event.participant;
-  myCustomMediaStreamTracksHandler(p.user_id, p.videoTrack, p.audioTrack);
-});
-callObject.join({ url: 'https://you.daily.co/hello' });
-
 
 </body>
 </html>
