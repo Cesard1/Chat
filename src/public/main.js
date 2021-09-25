@@ -2,11 +2,9 @@ $(document).ready(main);
 
 var contador = 1;
 
-function main(){
+function main () {
 	$('.menu_bar').click(function(){
-		// $('nav').toggle(); 
-
-		if(contador == 1){
+		if (contador == 1) {
 			$('nav').animate({
 				left: '0'
 			});
@@ -17,7 +15,10 @@ function main(){
 				left: '-100%'
 			});
 		}
-
 	});
 
-};
+	// Mostramos y ocultamos submenus
+	$('.submenu').click(function(){
+		$(this).children('.children').slideToggle();
+	});
+}
