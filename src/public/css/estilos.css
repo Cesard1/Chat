@@ -4,7 +4,9 @@
 }
 
 body {
-	background:#FFFFFA;
+	background: #1162ac; /*fallback for old browsers*/
+	background: -webkit-linear-gradient(left, tomato, cyan, lightgreen);
+	background: -webkit-linear-gradient(200px top, ellipse, white, #1162ac, black);
 }
 
 header {
