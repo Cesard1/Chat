@@ -5,13 +5,15 @@
           box-sizing: border-box;
 }
 
-body {
-  background: #F1F1F1;
-  font-family: 'Roboto', sans-serif;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+body{
+	 background: #F1F1F1;
+  	font-family: 'Roboto', sans-serif;
+ 	 -webkit-transition: .3s ease all;
+ 	 transition: .3s ease all;
 }
-
+.menu_bar {
+  display:none;
+}
 
 body.dark {
   background: #000;
@@ -23,6 +25,25 @@ a {
   font-weight: 500;
 }
 
+#contenedor{
+	display: none;
+}
+
+.error{
+	color: red;
+}
+
+.whisper{
+	color: grey;
+	font-size: italic;
+	display: inline;
+}
+
+.card{
+	margin: 0 auto;
+	float: none;
+	margin-bottom: 10px;
+}
 .contenedor {
   max-width: 1000px;
   width: 90%;
