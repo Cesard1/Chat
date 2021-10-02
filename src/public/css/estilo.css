@@ -24,26 +24,6 @@ a {
   text-decoration: none;
   font-weight: 500;
 }
-
-#contenedor{
-	display: none;
-}
-
-.error{
-	color: red;
-}
-
-.whisper{
-	color: grey;
-	font-size: italic;
-	display: inline;
-}
-
-.card{
-	margin: 0 auto;
-	float: none;
-	margin-bottom: 10px;
-}
 .contenedor {
   max-width: 1000px;
   width: 90%;
@@ -235,3 +215,24 @@ body.dark .grid .card {
 .grid .card .botones .boton.secundario:hover {
   background: #ACABAB;
 }
+
+#contenedor{
+	display: none;
+}
+
+.error{
+	color: red;
+}
+
+.whisper{
+	color: grey;
+	font-size: italic;
+	display: inline;
+}
+
+.card{
+	margin: 0 auto;
+	float: none;
+	margin-bottom: 10px;
+}
+
